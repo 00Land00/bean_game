@@ -234,6 +234,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1147760302, guid: 08beea2f62ab31d4ba163833df843611, type: 3}
+      propertyPath: move_speed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7913677484295267773, guid: 08beea2f62ab31d4ba163833df843611, type: 3}
       propertyPath: m_Name
       value: B_Bean
