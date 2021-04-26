@@ -31,14 +31,14 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: G_Bean_Sprite
+    path: B_Bean_Sprite
   m_FloatCurves: []
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -3980349988433384401, guid: 8a9d5b541b6a1254da8082b8640c6b94, type: 3}
+      value: {fileID: -603972636465674708, guid: 8a9d5b541b6a1254da8082b8640c6b94, type: 3}
     attribute: m_Sprite
-    path: G_Bean_Sprite
+    path: B_Bean_Sprite
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 16
@@ -49,21 +49,21 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 3759730221
+      path: 4248263998
       attribute: 0
       script: {fileID: 0}
       typeID: 212
       customType: 23
       isPPtrCurve: 1
     - serializedVersion: 2
-      path: 3759730221
+      path: 4248263998
       attribute: 3
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     pptrCurveMapping:
-    - {fileID: -3980349988433384401, guid: 8a9d5b541b6a1254da8082b8640c6b94, type: 3}
+    - {fileID: -603972636465674708, guid: 8a9d5b541b6a1254da8082b8640c6b94, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -101,7 +101,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.x
-    path: G_Bean_Sprite
+    path: B_Bean_Sprite
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -120,7 +120,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.y
-    path: G_Bean_Sprite
+    path: B_Bean_Sprite
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -139,7 +139,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.z
-    path: G_Bean_Sprite
+    path: B_Bean_Sprite
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves: []
