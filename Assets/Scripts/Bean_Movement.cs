@@ -45,9 +45,9 @@ public class Bean_Movement : MonoBehaviour
 		float v_dir = pc.Player.Move_Vertical.ReadValue<float>();
 
 		// process it into a new vector
-		Vector2 n_velocity = new Vector2(h_dir * move_speed, v_dir * move_speed);
+		Vector2 n_velocity = new Vector2(h_dir, v_dir).normalized;
 		// add new vector to velocity of rb2d
-		rb2d.velocity = n_velocity;
+		rb2d.velocity = n_velocity * move_speed;
 
 		// update animation fsm
 		bool has_hspeed = Mathf.Abs(rb2d.velocity.x) > Mathf.Epsilon;
