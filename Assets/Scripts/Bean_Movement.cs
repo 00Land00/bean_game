@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class Bean_Movement : MonoBehaviour
 {
 	[SerializeField] private float move_speed;
-	
+
 	private Rigidbody2D rb2d;
 	private Animator anim;
 	private Player_Controls pc;
@@ -32,10 +32,9 @@ public class Bean_Movement : MonoBehaviour
 		anim = GetComponent<Animator>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
 		Move();
-		
     }
 
 	private void Move()
@@ -48,18 +47,21 @@ public class Bean_Movement : MonoBehaviour
 		Vector2 n_velocity = new Vector2(h_dir, v_dir).normalized;
 		// add new vector to velocity of rb2d
 		rb2d.velocity = n_velocity * move_speed;
-
+		
 		// update animation fsm
-		bool has_hspeed = Mathf.Abs(rb2d.velocity.x) > Mathf.Epsilon;
-		bool has_vspeed = Mathf.Abs(rb2d.velocity.y) > Mathf.Epsilon;
-		anim.SetBool("isWalking", has_hspeed || has_vspeed);
-
+		anim.SetBool("isWalking", transform.hasChanged);
+		if (transform.hasChanged)
+		{
+			transform.hasChanged = false;
+		}
+		
 		// check for necessary flipping
-		FlipSprite(has_hspeed);
+		FlipSprite();
 	}
 
-	private void FlipSprite(bool has_hspeed)
+	private void FlipSprite()
 	{
+		bool has_hspeed = Mathf.Abs(rb2d.velocity.x) > Mathf.Epsilon;
 		// if moving, ensure it's facing in the direction of the velocity
 		if (has_hspeed)
 		{
